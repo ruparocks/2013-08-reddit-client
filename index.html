@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <!-- Bootstrap our AngularJS app and setup -->
-<html>
+<html ng-app="myApp">
 <head>
   <title>my Angular App</title>
 </head>
 <body>
 
-<h1>Hi</h1>
 
   <script type="text/javascript" src="js/vendor/angular/angular.js"></script>
   <script type="text/javascript" src="js/vendor/angular-route/angular-route.js"></script>
@@ -15,5 +14,12 @@
   <script type="text/javascript" src="js/services.js"></script>
   <script type="text/javascript" src="js/directives.js"></script>
   <script type="text/javascript" src="js/filters.js"></script>
+
+
+  <h1>Hi</h1>
+  <div ng-controller="redditCtrl" >
+    <div ng-repeat="article in articles"><a href="{{article.data.url}}"><img ng-src="{{article.data.thumbnail}}" /><br />{{ article.data.title }}</a></div>
+  </div>
+
 </body>
 </html>
