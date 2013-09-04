@@ -18,7 +18,7 @@
 
   <h1>Hi</h1>
   <div ng-controller="redditCtrl" >
-    <div ng-repeat="article in articles"><a href="{{article.data.url}}"><img ng-src="{{article.data.thumbnail}}" /><br />{{ article.data.title }}</a></div>
+    <div ng-repeat="article in articles" article-view ng-model="article"></div>
   </div>
 
 </body>
