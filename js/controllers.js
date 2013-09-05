@@ -5,9 +5,18 @@ angular.module('myApp.controllers', [])
     url: 'http://api.reddit.com/r/hot.json?jsonp=JSON_CALLBACK'
   }).success(function(data, status, headers, config) {
     $scope.articles = data.data.children;
-    // console.log('testing', data.data.children);
-    console.log('success');
+    console.log(data.data.children);
+    // console.log('success');
   }).error(function(data, status, headers, config) {
-    console.log('error');
+    // console.log('error');
+  });
+  $scope.plusVote = function(scope) {
+    scope.votes++;
+  };
+  $scope.negVote = function(scope) {
+    scope.votes--;
+  };
+  $scope.$watch('votes', function() {
+
   });
 }]);
