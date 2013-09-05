@@ -14,11 +14,7 @@
   <script type="text/javascript" src="js/services.js"></script>
   <script type="text/javascript" src="js/directives.js"></script>
   <script type="text/javascript" src="js/filters.js"></script>
-
-
-  <h1>Hi</h1>
-  <div ng-controller="redditCtrl" >
-    <div ng-repeat="article in articles | orderBy: 'votes':true" article-view ng-model="article"></div>
+  <div ng-view>
   </div>
 
 </body>

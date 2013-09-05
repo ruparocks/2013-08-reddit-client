@@ -16,7 +16,4 @@ angular.module('myApp.controllers', [])
   $scope.negVote = function(scope) {
     scope.votes--;
   };
-  $scope.$watch('votes', function() {
-
-  });
 }]);
