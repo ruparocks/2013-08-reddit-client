@@ -1,5 +1,8 @@
 angular.module('myApp.services', [])
-.factory('getReddit', ['$http', '$q', function($http, $q) {
+.factory('SessionService', ['$http', 'serverRoute', function($http, serverRoute) {
+
+}])
+.factory('getReddit', ['$http', '$q', 'serverRoute', function($http, $q, serverRoute) {
 
   return function() {
     var d = $q.defer();
